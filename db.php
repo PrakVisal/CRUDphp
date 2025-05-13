@@ -1,5 +1,5 @@
 <?php
-$host = "localhost";
+$host = "https://crudphp-5sr3.onrender.com";
 $dbname = "testdb";
 $user = "postgres";
 $pass = "123";
@@ -10,4 +10,3 @@ try {
 } catch (PDOException $e) {
     die("DB Connection Failed: " . $e->getMessage());
 }
-?>
