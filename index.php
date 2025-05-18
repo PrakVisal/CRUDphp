@@ -84,7 +84,7 @@
     <button class="about-btn" onclick="toggleAbout()">About Me</button>
     <div class="about-me" id="aboutSection">
         <h3>About Me</h3>
-        <p>Hello! My name is Prak Visal from E7 class. I created this simple PHP CRUD app to manage users using MySQL and PDO. This is a learning project to practice database operations like add, edit, and delete.</p>
+        <p>Hello Teacher! My name is Prak Visal from E7 class. I created this simple PHP CRUD app to manage users using MySQL. This is a learning project to practice database operations like add, edit, and delete.</p>
     </div>
 
 
