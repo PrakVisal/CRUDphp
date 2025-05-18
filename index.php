@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Users</title>
     <style>
@@ -9,26 +10,33 @@
             font-family: Arial, sans-serif;
             margin: 40px;
         }
+
         table {
             border-collapse: collapse;
             width: 60%;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: left;
         }
+
         th {
             background-color: #f4f4f4;
         }
+
         a {
             margin-right: 10px;
             text-decoration: none;
             color: blue;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .add-btn {
             margin-bottom: 15px;
             display: inline-block;
@@ -40,16 +48,22 @@
         }
     </style>
 </head>
+
 <body>
 
-<h2>Users</h2>
-<a class="add-btn" href="add.php">+ Add New</a>
-<table>
-    <tr><th>ID</th><th>Name</th><th>Email</th><th>Actions</th></tr>
-    <?php
-    $stmt = $pdo->query("SELECT * FROM users ORDER BY id");
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr>
+    <h2>Users</h2>
+    <a class="add-btn" href="add.php">+ Add New</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <?php
+        $stmt = $pdo->query("SELECT * FROM phpcrud ORDER BY id");
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr>
                 <td>{$row['id']}</td>
                 <td>{$row['name']}</td>
                 <td>{$row['email']}</td>
@@ -58,9 +72,10 @@
                     <a href='delete.php?id={$row['id']}'>Delete</a>
                 </td>
               </tr>";
-    }
-    ?>
-</table>
+        }
+        ?>
+    </table>
 
 </body>
+
 </html>
